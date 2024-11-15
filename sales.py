@@ -21,7 +21,7 @@ The function will also update the inventory_records (For restocking) for a  give
     '''
 
     # Check if it's a restocking day
-    if current_day % 7 == 0:
+    if current_day == 7:
         sales = 0  # No sales on restocking day
     else:
         # Generate a random number up to 200

@@ -18,7 +18,8 @@ available_items:(integer) This function returns this integer which updates the a
 The function will also update the inventory_records (For restocking) for a  given current day. It will also return "available_items".
     '''
     # Restock every 7 days 
-    if current_day % 7 == 0:
+    if current_day == 7:
+        #subtract the restocked items by the available items
         restocked_items = 2000 - available_items  
         available_items = 2000  
     else:
